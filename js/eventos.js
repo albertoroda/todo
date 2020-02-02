@@ -1,3 +1,4 @@
+mostrarTareas(listaTareas)
 btnGuardar = document.getElementById('guardar')
 btnEliminar = document.querySelector('article a')
 btnFiltrar = document.getElementById('prioridadSelect')
@@ -43,7 +44,11 @@ btnFiltrar.addEventListener('change', recogeFiltrado);
 
 function recogeFiltrado(e) {
     let filtrado = e.target.value;
-    filtrarTareaPrioridad(listaTareas, filtrado)
+    if (filtrado != "") {
+        filtrarTareaPrioridad(listaTareas, filtrado)
+    } else {
+        mostrarTareas(listaTareas)
+    }
 }
 
 //FIN
@@ -55,6 +60,10 @@ var busqueda = document.getElementById('search')
 busqueda.addEventListener('keyup', recogerBusqueda)
 
 function recogerBusqueda(e) {
-    filtrarTareaNombre(listaTareas, busqueda.value)
+    if (busqueda.value != "") {
+        filtrarTareaNombre(listaTareas, busqueda.value)
+    } else {
+        mostrarTareas(listaTareas)
+    }
 }
 //FIN

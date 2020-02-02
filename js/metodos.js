@@ -21,8 +21,10 @@ function mostrarTarea(pListaTareas, pId) {
 }
 
 function mostrarTareas(pListaTareas) {
+    seccion.innerHTML = ""
     for (let i = 0; i < pListaTareas.length; i++) {
         var idTarea = pListaTareas[i].idTarea;
+
         mostrarTarea(pListaTareas, idTarea);
     }
 }
