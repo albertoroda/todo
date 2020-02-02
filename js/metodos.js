@@ -3,6 +3,8 @@ var prioridad = 'urgente';
 
 var id = listaTareas.length;
 
+var seccion = document.getElementById("tareas")
+
 
 
 function nuevaTarea(pListaTareas, pTitulo, pPrioridad, pId) {
@@ -13,8 +15,6 @@ function nuevaTarea(pListaTareas, pTitulo, pPrioridad, pId) {
 }
 
 function mostrarTarea(pListaTareas, pId) {
-    var seccion = document.getElementById("tareas")
-
     var unaTarea = pListaTareas.find(tarea => {
         return tarea.idTarea == pId;
     })
