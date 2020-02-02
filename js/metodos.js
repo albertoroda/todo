@@ -17,6 +17,7 @@ function mostrarTarea(pListaTareas, pId) {
     var unaTarea = pListaTareas.find(tarea => {
         return tarea.idTarea == pId;
     })
+
     seccion.innerHTML += '<article id="' + unaTarea.idTarea + '" class="' + unaTarea.prioridad + '"><h2>' + unaTarea.titulo + '</h2><a href="#" title="eliminar">Eliminar</a></article>'
 }
 
