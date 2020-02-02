@@ -5,26 +5,29 @@
 body{
 	font-family: fantasy;
 	font-size: 1em;
+	background-image: url("https://www.masterofthesky.com/wp-content/uploads/2017/02/notebook-wallpaper-1.jpgº");
+	
 }
 
 #wrapper{
-	max-width: 100%;
+	max-width: 70%;
 	margin: 0 auto;
 }
 
 header .insert{
-	background-color: rgba(190, 16, 16, 0.712);
-	border-top: 2px solid black;
 	padding: 20px;
+	border-bottom: 2px black solid;
+	
 }
 header .insert h1{
 	text-align: center;
 	font-size: 3em;
-	color: white;
+	color: red
 }
 header .filter{
-	background-color: white;
+background-color: rgba(5, 5, 5, 0.3);
 	padding: 10px;
+	
 }
 
 main .tareas article{
@@ -35,19 +38,35 @@ main .tareas article{
 }
 
 main .tareas .urgente{
-	background-color: tomato;
+	background-color: rgba(255,0,0,0.2);
+	transition: 0.8s;
+}
+main .tareas .urgente:hover{
+	background-color: rgb(255,0,0);
+	
+	
 }
 
 main .tareas .diaria{
-	background-color: lightblue;
+	background-color: rgba(23, 189, 245, 0.2);
+	transition: 0.8s;
+}
+
+main .tareas .diaria:hover{
+background-color: rgb(23, 189, 245);
 }
 
 main .tareas .mensual{
-	background-color: lightgreen;
+	background-color: rgba(88, 245, 88, 0.2);
+	transition: 0.8s;
+}
+main .tareas .mensual:hover{
+	background-color: rgb(88, 245, 88);
 }
 
 main .tareas article>a{
-	background-color: red;
+	background-color: cadetblue;
+	border-radius: 50%;
 	display: inline-block;
 	padding: 21px;
 	color: white;
@@ -61,12 +80,13 @@ main .tareas article>a{
 
 main .tareas article>a:hover{
 	width: 125px;
+	background-color: crimson;
 }
 
 footer{
 	padding: 10px;
-	background-color: black;
-	color: white;
+	
+	color: black;
 }
 
 #mensaje{
