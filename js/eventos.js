@@ -1,5 +1,6 @@
 btnGuardar = document.getElementById('guardar')
-btnEliminar = document.querySelector('.tareas a')
+btnEliminar = document.querySelector('article a')
+btnFiltrar = document.getElementById('prioridadSelect')
 var prioridad = document.getElementById('prioridad')
 
 prioridad.addEventListener('change', recogePrioridad);
@@ -11,13 +12,11 @@ function recogePrioridad(e) {
 
     if (prioridad != '') {
         seleccionPrioridad = prioridad
-
     }
-    //Me devuelve el diagnostico seleccionado cada vez que cambio el selector:
-    //console.log(e.target.value)
 }
 //FIN
 
+//GUARDA TAREA
 btnGuardar.addEventListener('click', e => {
     e.preventDefault(); //Evita que el boton default te lleve a otra pagina
     var nombre = document.getElementById('tituloTarea').value //Almacena el valor del formulario nombre
@@ -29,8 +28,36 @@ btnGuardar.addEventListener('click', e => {
     }
 })
 
+//FIN
+
+//ELIMINA TAREA
+/*
 btnEliminar.addEventListener('click', e => {
-    e.preventDefault();
+    alert('hey');
+})*/
+
+//FIN
+
+//FILTRA TAREA
+btnFiltrar.addEventListener('change', recogeFiltrado);
+
+function recogeFiltrado(e) {
+    let filtrado = e.target.value;
+    filtrarTareaPrioridad(listaTareas, filtrado)
+}
+
+//FIN
 
 
-})
+//BUSQUEDA POR NOMBRE
+var busqueda = document.getElementById('search')
+
+busqueda.addEventListener('keyup', recogerBusqueda)
+
+function recogerBusqueda(e) {
+    filtrarTareaNombre(listaPacientes, busqueda.value)
+
+}
+
+
+//FIN

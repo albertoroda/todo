@@ -1,5 +1,4 @@
-var titulo = 'nueva';
-var prioridad = 'urgente';
+
 
 var id = listaTareas.length;
 
