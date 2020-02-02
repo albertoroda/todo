@@ -68,3 +68,16 @@ function filtrarTareaNombre(pListaTareas, pBuscar) {
     mostrarTareas(filtrarNombre);
     console.log(filtrarNombre)
 }
+
+/*
+function filtrarXbusqueda(pListaTareas, pNombre) {
+    var listaFiltrada = new Array();
+
+    for (tarea of pListaTareas) {
+        if (tarea.titulo.toLowerCase().includes(pNombre.toLowerCase())) {
+            listaFiltrada.push(tarea);
+        }
+    }
+    return listaFiltrada;
+}
+*/

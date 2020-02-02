@@ -55,9 +55,6 @@ var busqueda = document.getElementById('search')
 busqueda.addEventListener('keyup', recogerBusqueda)
 
 function recogerBusqueda(e) {
-    filtrarTareaNombre(listaPacientes, busqueda.value)
-
+    filtrarTareaNombre(listaTareas, busqueda.value)
 }
-
-
 //FIN
